@@ -14,8 +14,14 @@ export class AppComponent {
     this.logList.push(log);
   }
 
-  setSortType(type) {
+  setSortType(type: string) {
     this.sortType = type;
+  }
+
+  delete(logToDelete: Log) {
+    this.logList = this.logList.filter(log => {
+      return log !== logToDelete;
+    });
   }
 
   logList: Log[] = [

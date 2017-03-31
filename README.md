@@ -45,11 +45,6 @@ ng serve
   bower install bootstrap --save
   ```
   * Add **bootstrap** to angular-cli.json under "styles"
-  * Install **moment** and save as a dependency in bower.json for easier timestamps
-  ```console
-  bower install moment --save
-  ```
-  * Add **moment** to angular-cli.json under "scripts"
 
 2. Specs
   * **Spec 1**: Users can post a log object containing name, calories, and details of a food

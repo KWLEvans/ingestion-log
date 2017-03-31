@@ -1,5 +1,11 @@
 #edit-button {
   position: absolute;
+  right: 100px;
+  top: 8px;
+}
+
+#delete-button {
+  position: absolute;
   right: 5px;
   top: 8px;
 }

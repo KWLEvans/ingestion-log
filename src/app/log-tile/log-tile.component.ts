@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Log } from './../models/log.model';
 import { EditLogComponent } from './../edit-log/edit-log.component';
 
@@ -9,9 +9,14 @@ import { EditLogComponent } from './../edit-log/edit-log.component';
 })
 export class LogTileComponent {
   @Input() log: Log;
+  @Output() deleter = new EventEmitter();
   editMode: boolean = false;
 
   editToggle(input: boolean) {
     this.editMode = input;
+  }
+
+  delete() {
+    this.deleter.emit(this.log);
   }
 }

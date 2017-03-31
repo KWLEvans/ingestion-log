@@ -11,5 +11,5 @@
       </select>
     </div>
   </div>
-  <log-tile *ngFor="let log of logList | logSort:sortType" [log]="log"></log-tile>
+  <log-tile *ngFor="let log of logList | logSort:sortType" [log]="log" (deleter)="delete($event)"></log-tile>
 </div>
