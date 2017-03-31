@@ -1,1 +1,12 @@
+#log-list-title {
+  font-size: 50px !important;
+}
 
+#log-sort {
+  margin-bottom: 20px;
+}
+
+#log-sort select {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+}

@@ -2,14 +2,18 @@
   <h1>Ingestion Log</h1>
   <hr>
   <new-log (logSender)="appendLog($event)"></new-log>
-  <div class="panel panel-default">
-    <div class="panel-heading">
+  <div id="log-container" class="panel panel-default">
+    <div id="log-sort" class="panel-heading">
+      <h3 id="log-list-title" class="panel-title">{{sortType}}</h3>
+      <hr>
       <select class="form-control" (change)="setSortType($event.target.value)">
-        <option value="all">All Logs</option>
-        <option value="low-cal">Low Calorie Logs</option>
-        <option value="hi-cal">High Calorie Logs</option>
+        <option value="All Logs">All Logs</option>
+        <option value="Low Calorie Logs">Low Calorie Logs</option>
+        <option value="High Calorie Logs">High Calorie Logs</option>
       </select>
     </div>
+    <div class="panel-body">
+      <log-tile *ngFor="let log of logList | logSort:sortType" [log]="log" (deleter)="delete($event)"></log-tile>
+    </div>
   </div>
-  <log-tile *ngFor="let log of logList | logSort:sortType" [log]="log" (deleter)="delete($event)"></log-tile>
 </div>

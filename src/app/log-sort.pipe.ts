@@ -8,14 +8,14 @@ export class LogSortPipe implements PipeTransform {
 
   transform(input: Log[], sortType: string) {
     const output: Log[] = [];
-    if (sortType === 'low-cal') {
+    if (sortType === 'Low Calorie Logs') {
       input.forEach(log => {
         if (log.calories <= 500) {
           output.push(log);
         }
       });
       return output;
-    } else if (sortType === 'hi-cal') {
+    } else if (sortType === 'High Calorie Logs') {
       input.forEach(log => {
         if (log.calories > 500) {
           output.push(log);

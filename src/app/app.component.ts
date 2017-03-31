@@ -8,10 +8,10 @@ import { LogSortPipe } from './log-sort.pipe';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sortType: string = 'all';
+  sortType: string = 'All Logs';
 
   appendLog(log: Log) {
-    this.logList.push(log);
+    this.logList.unshift(log);
   }
 
   setSortType(type: string) {

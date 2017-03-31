@@ -1,12 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <input #name [(ngModel)]="log.name">
+    <input #name [(ngModel)]="log.name" class="form-control">
     <button (click)="doneEditing()" id="done-edit-button" class="btn btn-success">Done Editing</button>
   </div>
   <div class="panel-body">
-    <small>Date will go here</small>
-    <br>
-    <input #calories [(ngModel)]="log.calories"><h4 id="caloriesh4"> calories</h4>
+    <input #calories [(ngModel)]="log.calories" class="form-control"><h4 id="caloriesh4">calories</h4>
     <textarea class="form-control" rows="5" [(ngModel)]="log.details"></textarea>
   </div>
 </div>
