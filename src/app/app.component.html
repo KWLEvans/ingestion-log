@@ -1,5 +1,15 @@
 <div class="container">
   <h1>Ingestion Log</h1>
+  <hr>
   <new-log (logSender)="appendLog($event)"></new-log>
-  <log-tile *ngFor="let log of logList" [log]="log"></log-tile>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <select class="form-control" (change)="setSortType($event.target.value)">
+        <option value="all">All Logs</option>
+        <option value="low-cal">Low Calorie Logs</option>
+        <option value="hi-cal">High Calorie Logs</option>
+      </select>
+    </div>
+  </div>
+  <log-tile *ngFor="let log of logList | logSort:sortType" [log]="log"></log-tile>
 </div>

@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LogTileComponent } from './log-tile/log-tile.component';
 import { NewLogComponent } from './new-log/new-log.component';
+import { LogSortPipe } from './log-sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogTileComponent,
-    NewLogComponent
+    NewLogComponent,
+    LogSortPipe
   ],
   imports: [
     BrowserModule,

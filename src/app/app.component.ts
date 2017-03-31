@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Log } from './models/log.model';
+import { LogSortPipe } from './log-sort.pipe';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,14 @@ import { Log } from './models/log.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  sortType: string = 'all';
+
   appendLog(log: Log) {
     this.logList.push(log);
+  }
+
+  setSortType(type) {
+    this.sortType = type;
   }
 
   logList: Log[] = [

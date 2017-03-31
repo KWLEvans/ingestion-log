@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Log } from './../models/log.model';
 
 @Component({
   selector: 'log-tile',
