@@ -1,6 +1,7 @@
-<div class="panel panel-default">
+<div *ngIf="!editMode" class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">{{log.name}}</h3>
+    <button (click)="editToggle(true)" id="edit-button" class="btn btn-warning">Edit</button>
   </div>
   <div class="panel-body">
     <small>Date will go here</small>
@@ -8,3 +9,4 @@
     <blockquote>{{log.details}}</blockquote>
   </div>
 </div>
+<edit-log *ngIf="editMode" [log]="log" (doneSender)="editToggle(false)"></edit-log>

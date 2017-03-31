@@ -21,9 +21,7 @@
         "styles.css",
         "../bower_components/bootstrap/dist/css/bootstrap.css"
       ],
-      "scripts": [
-        "../bower_components/moment/moment.js"
-      ],
+      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

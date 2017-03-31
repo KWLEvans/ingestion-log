@@ -1,12 +1,11 @@
-#edit-button {
+#done-edit-button {
   position: absolute;
   right: 5px;
-  top: 8px;
+  top: 7px;
 }
 
-.panel-heading h3 {
-  display: inline-block;
-  padding-top: 12px;
+.panel-heading input {
+  margin-top: 2px;
 }
 
 .panel-heading {

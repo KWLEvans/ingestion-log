@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Log } from './../models/log.model';
+import { EditLogComponent } from './../edit-log/edit-log.component';
 
 @Component({
   selector: 'log-tile',
@@ -8,4 +9,9 @@ import { Log } from './../models/log.model';
 })
 export class LogTileComponent {
   @Input() log: Log;
+  editMode: boolean = false;
+
+  editToggle(input: boolean) {
+    this.editMode = input;
+  }
 }
