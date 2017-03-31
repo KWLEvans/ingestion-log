@@ -4,6 +4,10 @@
   top: 7px;
 }
 
+#caloriesh4 {
+  display: inline-block;
+}
+
 .panel-heading input {
   margin-top: 2px;
 }
