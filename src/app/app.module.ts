@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LogTileComponent } from './log-tile/log-tile.component';
+import { NewLogComponent } from './new-log/new-log.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogTileComponent
+    LogTileComponent,
+    NewLogComponent
   ],
   imports: [
     BrowserModule,

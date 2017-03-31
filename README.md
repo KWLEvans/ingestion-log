@@ -61,6 +61,7 @@ ng serve
 3. Integration
   * `log.model`: model for `log` objects
   * `app.component`: base page looping through all entries
+    * `new-log.component`: component to add new log entries
     * `calorie.pipe`: custom pipe to sort `log` objects by calorie value
     * `log-tile.component`: component loaded for each `log` object to display details
       * `edit-log.component`: component on each `log-tile` to allow editing of specific `log` objects

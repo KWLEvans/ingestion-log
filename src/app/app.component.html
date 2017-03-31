@@ -1,2 +1,5 @@
-<h1>Ingestion Log</h1>
-<log-tile *ngFor="let log of logList" [log]="log"></log-tile>
+<div class="container">
+  <h1>Ingestion Log</h1>
+  <new-log (logSender)="appendLog($event)"></new-log>
+  <log-tile *ngFor="let log of logList" [log]="log"></log-tile>
+</div>

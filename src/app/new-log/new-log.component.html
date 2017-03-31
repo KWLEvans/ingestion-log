@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="name">Type of Nourishment:</label>
+      <input id="name" class="form-control" type="text" #name>
+    </div>
+    <div class="form-group">
+      <label for="calories">Number of Calories:</label>
+      <input id="calories" class="form-control" type="number" #calories>
+    </div>
+    <div class="form-group">
+      <label for="details">Subject notes:</label>
+      <textarea id="details" class="form-control" rows="5" #details></textarea>
+    </div>
+    <button class="btn btn-success" (click)="submitLog(name.value, calories.value, details.value);name.value='';calories.value='';details.value=''">Submit Log</button>
+  </div>
+</div>

@@ -7,6 +7,10 @@ import { Log } from './models/log.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  appendLog(log: Log) {
+    this.logList.push(log);
+  }
+
   logList: Log[] = [
     {
       'name': 'Burger: Ham',
